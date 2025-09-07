@@ -34,6 +34,7 @@ printf "=================================\n"
 # --- Data Collection ---
 TOTAL_RAM_MB=$(free -m | awk '/^Mem:/{print $2}')
 HOST_USED_MB=$(free -m | awk '/^Mem:/{print $2 - $7}')
+ZFS_CACHE_MB=$(awk '/^size/ { printf "%.0f", $3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats 2>/dev/null || echo 0)
 printf "Total System RAM: ${TOTAL_RAM_MB} MB\n\n"
 
 declare -A lxc_data
@@ -109,6 +110,10 @@ printf "${COLOR_TABLE_HEADER}%-6s %-5s %-20s %-8s %-12s %-12s %s${COLOR_RESET}\n
 HOST_TOP_PROC=$(ps aux --sort=-%mem | awk 'NR==2{split($11,a,"/"); printf "%.1f%% %s", $4, a[length(a)]}')
 printf "%-6s %-5s %-20s %-8s %-12s %-12s %s\n" \
     "Host" "---" "Proxmox VE" "---" "${HOST_ONLY_MB} MB" "${TOTAL_RAM_MB} MB" "${HOST_TOP_PROC}"
+if [ "$ZFS_CACHE_MB" -gt 0 ]; then
+    printf "%-6s %-5s %-20s %-8s %-12s %-12s %s\n" \
+        "" "" "  |-> ZFS Cache" "---" "${ZFS_CACHE_MB} MB" "---" ""
+fi
 
 # LXC Containers
 for lxc_id in $(for key in "${!lxc_data[@]}"; do echo "$key"; done | cut -d, -f1 | sort -un); do
